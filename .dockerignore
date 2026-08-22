@@ -1,0 +1,13 @@
+.git
+.gitignore
+.dockerignore
+.venv
+__pycache__
+.vscode
+.idea
+.env
+client_simulator.py
+tests/
+task.md
+profile2_high_throughput_inference.md
+README.md

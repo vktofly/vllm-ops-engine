@@ -1,0 +1,11 @@
+- [x] **Phase 1: Setup**
+  - [x] Initialize `uv` project
+  - [x] Install dependencies (`fastapi`, `uvicorn`, `llama-cpp-python`, `prometheus-client`, `huggingface-hub`)
+- [x] **Phase 2: Core Application**
+  - [x] `src/model.py` (Mock LLM Engine due to C++ missing)
+  - [x] `src/monitoring.py` (Prometheus metrics definitions)
+  - [x] `src/api.py` (FastAPI routes for generation and metrics)
+- [x] **Phase 3: Testing & Simulation**
+  - [x] `client_simulator.py` (Async request spammer)
+  - [x] Start server and run simulation
+  - [x] Create `README.md` and commit to Git
