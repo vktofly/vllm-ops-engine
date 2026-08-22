@@ -22,7 +22,8 @@ PROMPTS = [
 async def make_request(client, idx):
     prompt = random.choice(PROMPTS)
     payload = {
-        "prompt": prompt,
+        "model": "mock-llama-3-8b",
+        "messages": [{"role": "user", "content": prompt}],
         "max_tokens": random.randint(50, 150)
     }
     
@@ -32,9 +33,12 @@ async def make_request(client, idx):
         data = response.json()
         latency = time.time() - start
         
-        print(f"Req {idx:02d} | Tokens: {data['usage']['completion_tokens']:3d} | "
-              f"Latency: {data['metrics']['latency_sec']:.2f}s | "
-              f"Throughput: {data['metrics']['tokens_sec']} t/s")
+        comp_tokens = data.get('usage', {}).get('completion_tokens', 0)
+        tps = comp_tokens / latency if latency > 0 else 0
+        
+        print(f"Req {idx:02d} | Tokens: {comp_tokens:3d} | "
+              f"Latency: {latency:.2f}s | "
+              f"Throughput: {tps:.1f} t/s")
     except Exception as e:
         print(f"Req {idx:02d} | FAILED: {e}")
 
