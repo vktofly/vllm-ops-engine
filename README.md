@@ -1,6 +1,6 @@
 # High-Throughput Inference Server
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-USERNAME/high_throughput_inference/blob/main/demo.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vktofly/high_throughput_inference/blob/main/demo.ipynb)
 An MLOps project demonstrating model serving architecture, concurrency, and observability. This simulates a high-throughput endpoint (like vLLM) exposed via FastAPI and tracked by Prometheus.
 
 ## Live Demo
