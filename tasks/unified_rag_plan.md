@@ -47,6 +47,6 @@ This feature integrates an embedding model and a reranking model directly into t
 | Event Loop Blocking | Med | Wrap the blocking `sentence-transformers` inference calls in `asyncio.to_thread` to preserve FastAPI concurrency. |
 | Slow TTFT (Time To First Token) | Med | Restrict the number of documents passed to the reranker (Top-K) to ensure the ranking phase doesn't throttle generation. |
 
-## Open Questions
-- Should we expose the model names (embedding/reranker) as environment variables to allow users to swap out `BGE` for `Nomic` or other architectures?
-- Do we need to support chunking of the documents inside the `/v1/rag` endpoint, or assume the user passes pre-chunked strings?
+## Resolved Questions
+- **Model flexibility**: We expose model names (embedding/reranker) as environment variables (`EMBEDDING_MODEL_NAME`, `RERANKER_MODEL_NAME`) to allow users to swap out BGE for Nomic or others.
+- **Chunking support**: We will support chunking of documents inside the `/v1/rag` endpoint to ensure long documents fit in context and improve retrieval precision.

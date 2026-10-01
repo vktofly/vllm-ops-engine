@@ -1,6 +1,10 @@
 # High-Throughput Inference Server
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-USERNAME/high_throughput_inference/blob/main/demo.ipynb)
 An MLOps project demonstrating model serving architecture, concurrency, and observability. This simulates a high-throughput endpoint (like vLLM) exposed via FastAPI and tracked by Prometheus.
+
+## Live Demo
+Click the **Open in Colab** badge above to launch a fully functioning RAG inference engine on a free Google T4 GPU. A public web UI (Gradio) will be generated for you to interact with the engine.
 
 ## Features
 - **Concurrent Request Handling:** Exposes `/v1/chat/completions` using an async FastAPI architecture.

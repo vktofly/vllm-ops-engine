@@ -1,0 +1,3 @@
+- [ ] Task 1: Build the Gradio UI (`src/gradio_ui.py`)
+- [ ] Task 2: Generate the Colab Notebook (`demo.ipynb`)
+- [ ] Task 3: Update README.md with the "Open in Colab" badge
